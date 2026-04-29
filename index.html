@@ -4,210 +4,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bee-Q Naturals | Premium Organic Hair Care & Growth Cream</title>
-    
-    <meta name="description" content="Discover Bee-Q Naturals premium hair cream. Organic formulas designed for hair growth, moisture, and scalp health. Shop our natural beauty collection today.">
-    <meta name="keywords" content="Bee-Q Naturals, organic hair cream, natural hair growth, herbal hair care, sulfate-free hair products">
-    <meta name="robots" content="index, follow">
+    <meta name="description" content="Unlock your hair's potential with Bee-Q Naturals. Our organic hair cream promotes growth, moisture, and shine for all hair types. Order yours today!">
+    <meta name="keywords" content="hair cream, organic hair care, Bee-Q Naturals, hair growth, natural hair products">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .bg-gold { background-color: #D4AF37; }
-        .text-forest { color: #014421; }
-        .btn-gradient { background: linear-gradient(135deg, #014421 0%, #026330 100%); }
+        .primary-gold { color: #D4AF37; }
+        .bg-primary-gold { background-color: #D4AF37; }
+        .forest-accent { color: #22543D; }
     </style>
 </head>
 <body class="bg-white text-gray-800 overflow-x-hidden">
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 py-4">
-        <div class="container mx-auto px-6 flex justify-between items-center">
-            <div class="flex items-center">
-                <img src="logo.png" alt="Bee-Q Naturals Logo" class="h-12 w-auto mr-2">
-            </div>
-            <div class="hidden md:flex space-x-8 font-medium">
-                <a href="#about" class="hover:text-gold transition">Our Story</a>
-                <a href="#products" class="hover:text-gold transition">Products</a>
-                <a href="#reviews" class="hover:text-gold transition">Reviews</a>
-                <a href="#order" class="bg-forest text-white px-6 py-2 rounded-full btn-gradient">Order Now</a>
-            </div>
+    <nav class="flex justify-between items-center px-6 py-4 shadow-sm fixed w-full bg-white z-50">
+        <div class="flex items-center">
+            <img src="assets/logo.png" alt="Bee-Q Naturals Logo" class="h-12 w-auto">
         </div>
+        <div class="hidden md:flex space-x-8 font-medium">
+            <a href="#about" class="hover:text-green-700">Product Info</a>
+            <a href="#shop" class="hover:text-green-700">Other Products</a>
+            <a href="#reviews" class="hover:text-green-700">Reviews</a>
+        </div>
+        <a href="#order" class="bg-black text-white px-6 py-2 rounded-full hover:bg-green-900 transition">Order Now</a>
     </nav>
 
-    <section class="pt-32 pb-20 px-6">
-        <div class="container mx-auto flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2" data-aos="fade-right">
-                <span class="text-gold font-bold tracking-widest uppercase text-sm">100% Organic & Pure</span>
-                <h1 class="text-5xl md:text-7xl mt-4 mb-6 leading-tight">Unlock the Secret to <span class="text-forest">Radiant Hair</span></h1>
-                <p class="text-lg text-gray-600 mb-8 max-w-md">Bee-Q Naturals hair cream blends ancient herbal wisdom with modern science to nourish your scalp and accelerate growth.</p>
-                <a href="#order" class="inline-block btn-gradient text-white px-10 py-4 rounded-lg shadow-xl hover:scale-105 transition-transform">Get Yours Today</a>
-            </div>
-            <div class="md:w-1/2 mt-12 md:mt-0" data-aos="fade-left">
-                <div class="bg-gray-50 rounded-2xl p-4 border border-gray-100">
-                    <img src="main-product.jpg" alt="Bee-Q Naturals Hair Cream" class="rounded-xl shadow-2xl w-full object-cover">
-                </div>
-            </div>
+    <section class="pt-32 pb-20 px-6 flex flex-col items-center text-center" data-aos="fade-up">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6">Nature’s Secret to <span class="primary-gold">Glowing Hair.</span></h1>
+        <p class="text-lg text-gray-600 max-w-2xl mb-10">Bee-Q Naturals is crafted with 100% organic ingredients to strengthen your roots and give your hair the shine it deserves.</p>
+        <div class="w-full max-w-4xl h-96 bg-gray-100 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
+            <p class="text-gray-400">[Main Product Image Gallery Goes Here]</p>
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <h2 class="text-4xl mb-4 text-forest">Why Choose Bee-Q Naturals?</h2>
-                <div class="w-24 h-1 bg-gold mx-auto"></div>
+    <section id="about" class="py-20 bg-gray-50 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-10">
+            <div class="p-8 bg-white rounded-xl shadow-sm" data-aos="fade-right">
+                <h3 class="font-bold text-xl mb-3">Deep Moisture</h3>
+                <p>Locks in hydration for up to 48 hours, preventing breakage and dryness.</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-12 text-center">
-                <div data-aos="zoom-in" data-aos-delay="100">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">🌿</div>
-                    <h3 class="text-xl font-bold mb-3">All Natural</h3>
-                    <p class="text-gray-500 text-sm">No harsh chemicals, parabens, or sulfates. Just pure botanical goodness.</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="200">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">✨</div>
-                    <h3 class="text-xl font-bold mb-3">Deep Moisture</h3>
-                    <p class="text-gray-500 text-sm">Locks in hydration for up to 48 hours, leaving hair soft and manageable.</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="300">
-                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-md">📈</div>
-                    <h3 class="text-xl font-bold mb-3">Rapid Growth</h3>
-                    <p class="text-gray-500 text-sm">Stimulates follicles to promote thicker, longer, and healthier hair.</p>
-                </div>
+            <div class="p-8 bg-white rounded-xl shadow-sm" data-aos="fade-up">
+                <h3 class="font-bold text-xl mb-3">Growth Booster</h3>
+                <p>Enriched with natural oils that stimulate follicles for faster growth.</p>
+            </div>
+            <div class="p-8 bg-white rounded-xl shadow-sm" data-aos="fade-left">
+                <h3 class="font-bold text-xl mb-3">All Hair Types</h3>
+                <p>Formulated to work perfectly on natural, relaxed, or treated hair.</p>
             </div>
         </div>
     </section>
 
-    <section id="products" class="py-20 px-6">
-        <div class="container mx-auto">
-            <h2 class="text-3xl text-center mb-12">Our Natural Collection</h2>
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="group cursor-pointer" data-aos="fade-up">
-                    <div class="overflow-hidden rounded-xl bg-gray-100 aspect-square mb-4">
-                        <img src="product2.jpg" alt="Shampoo" class="group-hover:scale-110 transition duration-500">
+    <section id="shop" class="py-20 px-6 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center">Explore Our Collection</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="group cursor-pointer">
+                <div class="aspect-square bg-gray-100 rounded-lg mb-4 overflow-hidden">
+                    <div class="w-full h-full group-hover:scale-105 transition duration-300 flex items-center justify-center text-gray-400">Product Pic</div>
+                </div>
+                <h4 class="font-semibold">Sulfate-Free Shampoo</h4>
+                <p class="text-sm text-gray-500">₦5,000</p>
+            </div>
+            </div>
+    </section>
+
+    <section id="reviews" class="py-20 bg-black text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center">What Our Queens Say</h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide text-center pb-10">
+                        <p class="text-xl italic">"My hair has never been this soft! Bee-Q is a game changer."</p>
+                        <p class="mt-4 font-bold primary-gold">— Sarah J.</p>
                     </div>
-                    <h4 class="font-semibold">Soothe & Shine Shampoo</h4>
-                    <p class="text-gold font-bold">$25.00</p>
-                </div>
-                </div>
+                    </div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </section>
 
-    <section id="reviews" class="py-20 bg-forest text-white overflow-hidden">
-        <div class="container mx-auto px-6">
-            <h2 class="text-3xl text-center mb-12">Customer Love</h2>
-            <div class="flex space-x-8 animate-pulse"> <div class="min-w-[300px] bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
-                    <p class="italic mb-6">"My hair has never felt this soft. The Bee-Q cream is literally magic in a jar!"</p>
-                    <p class="font-bold">- Sarah J.</p>
+    <section id="order" class="py-20 px-6 bg-white">
+        <div class="max-w-2xl mx-auto bg-gray-50 p-8 rounded-2xl border border-gray-100 shadow-xl" data-aos="zoom-in">
+            <h2 class="text-3xl font-bold mb-2 text-center">Place Your Order</h2>
+            <p class="text-center text-gray-600 mb-8">Fill the form below and we will contact you immediately.</p>
+            
+            <form id="orderForm" class="space-y-4">
+                <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 rounded-lg border focus:ring-2 focus:ring-green-600 outline-none">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="tel" name="phone1" placeholder="Phone Number 1" required class="w-full p-4 rounded-lg border outline-none">
+                    <input type="tel" name="phone2" placeholder="Phone Number 2 (Optional)" class="w-full p-4 rounded-lg border outline-none">
                 </div>
+                <input type="text" name="address" placeholder="Delivery Address" required class="w-full p-4 rounded-lg border outline-none">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" name="state" placeholder="State" required class="w-full p-4 rounded-lg border outline-none">
+                    <input type="text" name="country" placeholder="Country" required class="w-full p-4 rounded-lg border outline-none">
                 </div>
-        </div>
-    </section>
+                
+                <div class="py-2">
+                    <label class="block font-semibold mb-2">Select Products:</label>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3"><input type="checkbox" name="products" value="Hair Cream" class="w-5 h-5"> <span>Bee-Q Hair Cream</span></label>
+                        <label class="flex items-center space-x-3"><input type="checkbox" name="products" value="Shampoo" class="w-5 h-5"> <span>Sulfate-Free Shampoo</span></label>
+                        <label class="flex items-center space-x-3"><input type="checkbox" name="products" value="Oil" class="w-5 h-5"> <span>Essential Growth Oil</span></label>
+                    </div>
+                </div>
 
-    <section id="order" class="py-20 px-6">
-        <div class="container mx-auto max-w-2xl bg-white border border-gray-100 shadow-2xl rounded-3xl p-8 md:p-12" data-aos="fade-up">
-            <h2 class="text-4xl text-center mb-8">Secure Your Order</h2>
-            <form id="orderForm" class="space-y-6">
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Full Name</label>
-                    <input type="text" name="name" required class="w-full p-3 rounded-lg border border-gray-200 focus:border-gold outline-none">
-                </div>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Phone Number 1</label>
-                        <input type="tel" name="phone1" required class="w-full p-3 rounded-lg border border-gray-200">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Phone Number 2</label>
-                        <input type="tel" name="phone2" class="w-full p-3 rounded-lg border border-gray-200">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Delivery Address</label>
-                    <textarea name="address" required class="w-full p-3 rounded-lg border border-gray-200 h-24"></textarea>
-                </div>
-                <div class="grid md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">State</label>
-                        <input type="text" name="state" required class="w-full p-3 rounded-lg border border-gray-200">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold mb-2">Country</label>
-                        <input type="text" name="country" required class="w-full p-3 rounded-lg border border-gray-200">
-                    </div>
-                </div>
-                <div>
-                    <label class="block text-sm font-semibold mb-2">Select Products</label>
-                    <select name="products" multiple class="w-full p-3 rounded-lg border border-gray-200 h-32">
-                        <option value="hair_cream">Bee-Q Naturals Hair Cream</option>
-                        <option value="shampoo">Soothe & Shine Shampoo</option>
-                        <option value="conditioner">Herbal Conditioner</option>
-                    </select>
-                    <p class="text-xs text-gray-400 mt-1">Hold Ctrl (Cmd) to select multiple</p>
-                </div>
-                <button type="submit" class="w-full py-4 btn-gradient text-white font-bold rounded-xl shadow-lg">Submit Order Now</button>
+                <button type="submit" class="w-full bg-green-800 text-white font-bold py-4 rounded-lg hover:bg-black transition duration-300">CONFIRM ORDER</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-white py-12 px-6">
-        <div class="container mx-auto grid md:grid-cols-4 gap-12">
-            <div>
-                <img src="logo-white.png" alt="Bee-Q Naturals" class="h-10 mb-6">
-                <p class="text-gray-400 text-sm">Empowering your natural beauty journey with premium organic care.</p>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Quick Links</h4>
-                <ul class="text-gray-400 space-y-2 text-sm">
-                    <li><a href="/about" class="hover:text-white">About Us</a></li>
-                    <li><a href="/contact" class="hover:text-white">Contact Us</a></li>
-                    <li><a href="/privacy" class="hover:text-white">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Social Media</h4>
-                <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold transition">Ig</a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold transition">Fb</a>
-                    <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold transition">Tw</a>
-                </div>
-            </div>
-            <div>
-                <h4 class="font-bold mb-4">Newsletter</h4>
-                <input type="email" placeholder="Your Email" class="w-full p-2 bg-gray-800 border-none rounded mb-2">
-                <button class="bg-gold px-4 py-2 text-xs font-bold uppercase">Subscribe</button>
-            </div>
+    <div class="flex justify-center space-x-6 py-10 bg-gray-50">
+        <a href="#" class="text-gray-400 hover:text-pink-600 font-bold">Instagram</a>
+        <a href="#" class="text-gray-400 hover:text-blue-600 font-bold">Facebook</a>
+        <a href="#" class="text-gray-400 hover:text-green-500 font-bold">WhatsApp</a>
+    </div>
+
+    <footer class="bg-white border-t py-10 px-6 text-center">
+        <div class="flex flex-wrap justify-center space-x-6 mb-6 text-sm font-medium">
+            <a href="about/" class="hover:underline">About Us</a>
+            <a href="contact/" class="hover:underline">Contact Us</a>
+            <a href="privacy/" class="hover:underline">Privacy Policy</a>
         </div>
-        <div class="text-center mt-12 pt-8 border-t border-gray-800 text-gray-500 text-xs">
-            &copy; 2026 Bee-Q Naturals. All Rights Reserved.
-        </div>
+        <p class="text-gray-400 text-xs">&copy; 2026 Bee-Q Naturals. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Initialize Animations
         AOS.init({ duration: 1000, once: true });
+        
+        var swiper = new Swiper(".mySwiper", {
+            pagination: { el: ".swiper-pagination", clickable: true },
+            autoplay: { delay: 3000 },
+        });
 
         // Form Submission Logic
-        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+        document.getElementById('orderForm').onsubmit = async (e) => {
             e.preventDefault();
             const formData = new FormData(e.target);
             const data = Object.fromEntries(formData.entries());
-            
-            // Logic to send to your backend
-            try {
-                const response = await fetch('YOUR_BACKEND_ENDPOINT_URL', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(data)
-                });
-                if(response.ok) alert('Order received! We will contact you shortly.');
-            } catch (err) {
-                console.error('Submission failed', err);
-                alert('Order submitted locally. (Connect backend URL to go live)');
-            }
-        });
+            data.products = Array.from(formData.getAll('products'));
+
+            // Replace with your actual Backend URL
+            alert("Order sent to backend: " + JSON.stringify(data));
+            /*
+            fetch('YOUR_BACKEND_API_URL', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            */
+        };
     </script>
 </body>
 </html>
