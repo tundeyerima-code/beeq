@@ -272,30 +272,60 @@
                 <p>Designed for Success.</p>
             </div>
         </div>
-    </footer>
+    </footer><script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Animations and Slider
+    AOS.init({ duration: 800, once: true });
+    const swiper = new Swiper(".mySwiper", {
+        loop: true,
+        pagination: { el: ".swiper-pagination", clickable: true },
+        autoplay: { delay: 4000 },
+    });
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        AOS.init({ duration: 800, once: true });
+    // FORM HANDLING: Formspree + WhatsApp
+    document.getElementById('orderForm').onsubmit = async function(e) {
+        e.preventDefault();
         
-        const swiper = new Swiper(".mySwiper", {
-            loop: true,
-            pagination: { el: ".swiper-pagination", clickable: true },
-            autoplay: { delay: 4000 },
-        });
+        const btn = this.querySelector('button[type="submit"]');
+        const originalText = btn.innerText;
+        
+        // Show loading state
+        btn.innerText = "Processing Order...";
+        btn.disabled = true;
 
-        // Form Submission logic for your Backend
-        document.getElementById('orderForm').onsubmit = function(e) {
-            e.preventDefault();
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData.entries());
-            data.product_list = formData.getAll('product_list');
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
+        data.product_list = formData.getAll('product_list');
 
-            // Send to your backend
-            console.log("Order Data Sent:", data);
-            alert("Thank you! Your order has been received.");
-        };
-    </script>
+        // 1. SEND TO FORMSPREE (Background Email Record)
+        // REPLACE 'YOUR_ID' with the actual ID from your Formspree dashboard
+        try {
+            await fetch('https://formspree.io/f/YOUR_ID', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+        } catch (error) {
+            console.error("Formspree Error:", error);
+        }
+
+        // 2. CONSTRUCT WHATSAPP MESSAGE
+        // REPLACE with your actual phone number (include country code, no + sign)
+        const myPhoneNumber = "2348088500953"; 
+        
+        const message = `*NEW ORDER - BEE-Q NATURALS*%0A` +
+                        `--------------------------%0A` +
+                        `*Name:* ${data.full_name}%0A` +
+                        `*Phone 1:* ${data.phone1}%0A` +
+                        `*Phone 2:* ${data.phone2 || 'N/A'}%0A` +
+                        `*Address:* ${data.address}%0A` +
+                        `*State:* ${data.state}%0A` +
+                        `*Products:* ${data.product_list.join(", ")}`;
+
+        // 3. REDIRECT TO WHATSAPP
+        window.location.href = `https://wa.me/${myPhoneNumber}?text=${message}`;
+    };
+</script>
 </body>
 </html>
